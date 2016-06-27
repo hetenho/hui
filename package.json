@@ -1,0 +1,40 @@
+{
+  "name": "hui",
+  "version": "1.0.0",
+  "description": "A CSS component library",
+  "main": "hui.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hetenho/hui.git"
+  },
+  "keywords": [
+    "CSS",
+    "PostCSS",
+    "CSSNext",
+    "Material",
+    "design",
+    "modern"
+  ],
+  "author": "hetenho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hetenho/hui/issues"
+  },
+  "homepage": "https://github.com/hetenho/hui#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "cssnano": "^3.7.1",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-watch": "^4.3.8",
+    "postcss": "^5.0.21",
+    "postcss-cssnext": "^2.6.0",
+    "postcss-import": "^8.1.2",
+    "run-sequence": "^1.2.1"
+  }
+}
