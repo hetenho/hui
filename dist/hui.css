@@ -24,7 +24,7 @@ html {
   background-color: #90a4ae;
   box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
 }
-.ripple-effect{
+.ripplr{
   position: absolute;
   border-radius: 50%;
   width: 50px;
