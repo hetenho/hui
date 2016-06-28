@@ -1,33 +1,45 @@
-(function (window, $) {
+if (document.readyState!='loading') {
+  Ripplr();
+} else if (document.addEventListener) {
+  document.addEventListener('DOMContentLoaded', Ripplr());
+}
 
-  $(function() {
+function Ripplr() {
+  this.selector = '.btn';
+  attachClickHandlers();
 
+  function attachClickHandlers() {
+    var matches = document.querySelectorAll(this.selector);
+    for (var i=0; i < matches.length; i++) {
+      var el = matches[i];
+      el.addEventListener('click', function(e) {
+        handleClick(e, el);
+      });
+    }
+  }
 
-    $('.btn').on('click', function (event) {
-      event.preventDefault();
+  function handleClick(e, el) {
+    var offset = getOffset(el),
+        div = document.createElement('div'),
+        xPos = e.pageX - offset.left,
+        yPos = e.pageY - offset.top;
 
-      var $div = $('<div/>'),
-          btnOffset = $(this).offset(),
-      		xPos = event.pageX - btnOffset.left,
-      		yPos = event.pageY - btnOffset.top;
+    div.classList.add('ripplr');
+    div.style.height = el.height;
+    div.style.width = el.height;
+    div.style.top = yPos - (parseInt(el.offsetHeight)/2);
+    div.style.left = xPos - (parseInt(el.offsetWidth)/2);
+    el.appendChild(div);
 
-      $div.addClass('ripple-effect');
+    setTimeout(function() {
+      div.parentNode.removeChild(div);
+    }, 1800);
+  }
 
-      $div.css("height", $(this).height());
-      $div.css("width", $(this).height());
-      $div
-        .css({
-          top: yPos - ($div.height()/2),
-          left: xPos - ($div.width()/2),
-          background: $(this).data("ripple-color")
-        })
-        .appendTo($(this));
-
-      setTimeout(function() {
-        $div.remove();
-      }, 1800);
-    });
-
-  });
-
-})(window, jQuery);
+  function getOffset(el) {
+    var rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+  }
+}
