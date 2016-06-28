@@ -1,5 +1,11 @@
 if (document.readyState!='loading') {
-  Ripplr();
+  Ripplr({
+    selector: '.btn',
+    effectClass: 'ripplr'
+  });
 } else if (document.addEventListener) {
-  document.addEventListener('DOMContentLoaded', Ripplr());
+  document.addEventListener('DOMContentLoaded', Ripplr({
+    selector: '.btn',
+    effectClass: 'ripplr'
+  }));
 }
