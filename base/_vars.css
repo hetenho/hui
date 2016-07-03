@@ -1,0 +1,19 @@
+/**
+* Theme variables
+*/
+:root {
+
+  /* Colors */
+  --brandColor: #607d8b;
+  --highlightColor: #90a4ae;
+
+  /* Fonts */
+  --fontSize: 16px;
+
+  /* Box-shadow */
+  --boxShadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  --boxShadowHover: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+
+  /* Ripplr */
+  --ripplrRadius: 10px;
+}

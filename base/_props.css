@@ -1,0 +1,25 @@
+/**
+* Theme property sets
+*/
+:root {
+  
+  --theme: {
+    color: #ffffff;
+    background-color: var(--brandColor);
+  };
+
+  --theme-inverse: {
+    color: var(--brandColor);
+    background: #ffffff;
+  }
+
+  --theme-hover: {
+    background-color: var(--highlightColor);
+    box-shadow: var(--boxShadowHover);
+  };
+
+  --theme-inverse-hover: {
+    color: var(--highlightColor);
+    box-shadow: var(--boxShadowHover);
+  };
+}

@@ -1,3 +1,5 @@
+@import "./base/_vars.css";
+@import "./base/_props.css";
 @import "./base/_base.css";
 @import "./components/_button.css";
 @import "./components/_animation.css";
