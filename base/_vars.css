@@ -16,4 +16,11 @@
 
   /* Ripplr */
   --ripplrRadius: 10px;
+  --ripplrBGColor: #fff;
+  --ripplrTime: 2s;
+
+  --borderRadius: 2px;
+
+  /* Transitions */
+  --defaultTransition: all .3s linear
 }
