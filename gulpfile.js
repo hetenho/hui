@@ -5,6 +5,7 @@ var watch = require('gulp-watch');
 var atImport = require('postcss-import');
 var rename = require('gulp-rename');
 var cssnano = require('gulp-cssnano');
+var concat = require('gulp-concat');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
 
@@ -19,6 +20,13 @@ gulp.task('css', function() {
     .pipe(browserSync.stream());
   });
 
+gulp.task('js', function() {
+  return gulp.src(['js/*/*.js', 'hui.js'])
+    .pipe(concat('hui.js'))
+    .pipe(gulp.dest('./dist/'))
+    .pipe(browserSync.stream());
+  });
+
 // Static server
 gulp.task('serve', function() {
   browserSync.init({
@@ -28,6 +36,7 @@ gulp.task('serve', function() {
     port: 3002
   });
   gulp.watch(['**/*.css'], ['css']);
+  gulp.watch(['js/**/*.js', 'hui.js'], ['js']);
 });
 
 gulp.task('default', function() {
