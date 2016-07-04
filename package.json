@@ -26,6 +26,7 @@
   "homepage": "https://github.com/hetenho/hui#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
+    "browser-sync": "^2.13.0",
     "cssnano": "^3.7.1",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.2",
