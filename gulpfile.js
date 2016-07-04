@@ -7,6 +7,7 @@ var rename = require('gulp-rename');
 var cssnano = require('gulp-cssnano');
 var concat = require('gulp-concat');
 var runSequence = require('run-sequence');
+var browserify = require('gulp-browserify');
 var browserSync = require('browser-sync').create();
 
 gulp.task('css', function() {
@@ -21,8 +22,10 @@ gulp.task('css', function() {
   });
 
 gulp.task('js', function() {
-  return gulp.src(['js/*/*.js', 'hui.js'])
-    .pipe(concat('hui.js'))
+  return gulp.src(['hui.js'])
+    .pipe(browserify({
+		  insertGlobals : true
+		}))
     .pipe(gulp.dest('./dist/'))
     .pipe(browserSync.stream());
   });

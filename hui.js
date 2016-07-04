@@ -1,3 +1,5 @@
+var Ripplr = require('ripplr');
+
 if (document.readyState!='loading') {
   Ripplr({
     selector: '.btn',

@@ -29,6 +29,7 @@
     "browser-sync": "^2.13.0",
     "cssnano": "^3.7.1",
     "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-postcss": "^6.1.1",
@@ -37,6 +38,7 @@
     "postcss": "^5.0.21",
     "postcss-cssnext": "^2.6.0",
     "postcss-import": "^8.1.2",
+    "ripplr": "^1.2.0",
     "run-sequence": "^1.2.1"
   }
 }
