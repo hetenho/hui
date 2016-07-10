@@ -29,3 +29,8 @@
 .btn {
   @apply --btn;
 }
+
+.btn.disabled {
+  @apply --disabled;
+  background-color: var(--disabledBGColor);
+}

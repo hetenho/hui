@@ -1,0 +1,15 @@
+/**
+* Default label with a custom property set
+*/
+:root {
+
+  --label-base: {
+    display: inline-block;
+    font-size: calc(var(--fontSize)-2);
+    color: #aaa;
+  };
+}
+
+.label {
+  @apply --label-base;
+}

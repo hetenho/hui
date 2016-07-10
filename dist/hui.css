@@ -10,6 +10,8 @@
   /* Box-shadow */
 
   /* Ripplr */
+
+  /* Transitions */
 }
 /**
 * Theme property sets
@@ -43,6 +45,78 @@ html {
   background-color: #90a4ae;
   box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
 }
+.btn.disabled {
+  color: #dddddd;
+  background-color: #f7f7f7;
+}
+.btn.disabled::-webkit-input-placeholder {
+  color: #dddddd;
+}
+.btn.disabled::-moz-placeholder {
+  color: #dddddd;
+}
+.btn.disabled:-ms-input-placeholder {
+  color: #dddddd;
+}
+.btn.disabled::placeholder {
+  color: #dddddd;
+}
+/**
+* Default label with a custom property set
+*/
+.label {
+  display: inline-block;
+  font-size: 14px;
+  color: #aaa;
+}
+/**
+* Default input with a custom property set
+*/
+.input {
+  width: 100%;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid #607d8b;
+  transition: all .3s linear;
+  padding: 8px 0;
+  font-size: 16px;
+}
+.input:focus {
+  border-bottom: 1px solid #607d8b;
+  box-shadow: 0px 1px 0px 0px #607d8b;
+}
+.input::-webkit-input-placeholder {
+  font-size: -8px;
+  font-style: italic;
+}
+.input::-moz-placeholder {
+  font-size: -8px;
+  font-style: italic;
+}
+.input:-ms-input-placeholder {
+  font-size: -8px;
+  font-style: italic;
+}
+.input::placeholder {
+  font-size: -8px;
+  font-style: italic;
+}
+.input.disabled {
+  color: #dddddd;
+  border-color: #dddddd;
+}
+.input.disabled::-webkit-input-placeholder {
+  color: #dddddd;
+}
+.input.disabled::-moz-placeholder {
+  color: #dddddd;
+}
+.input.disabled:-ms-input-placeholder {
+  color: #dddddd;
+}
+.input.disabled::placeholder {
+  color: #dddddd;
+}
 @keyframes ripple-animation {
   from {
     transform: scale(1);
@@ -58,6 +132,6 @@ html {
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  background: white;
+  background: #fff;
   animation: ripple-animation 2s;
 }

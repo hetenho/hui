@@ -1,0 +1,38 @@
+/**
+* Default input with a custom property set
+*/
+:root {
+
+  --input-base: {
+    width: 100%;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid var(--brandColor);
+    transition: var(--defaultTransition);
+
+    &:focus {
+      border-bottom: 1px solid var(--brandColor);
+      box-shadow: 0px 1px 0px 0px var(--brandColor);
+    }
+
+    &::placeholder {
+      font-size: calc(var(--fontSize)/-2);
+      font-style: italic;
+    }
+  };
+
+  --input: {
+    @apply --input-base;
+    padding: calc(var(--fontSize)/2) 0;
+    font-size: var(--fontSize);
+  }
+}
+
+.input {
+  @apply --input;
+}
+
+.input.disabled {
+  @apply --disabled;
+  border-color: var(--disabledColor);
+}
